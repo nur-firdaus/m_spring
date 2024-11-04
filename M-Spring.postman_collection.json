@@ -1,0 +1,188 @@
+{
+	"info": {
+		"_postman_id": "c248ef3a-22d6-4c03-9bc7-e914d9963336",
+		"name": "M-Spring",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28654350"
+	},
+	"item": [
+		{
+			"name": "movie-list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9701/api/movies?page=0&size=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9701",
+					"path": [
+						"api",
+						"movies"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "save-movie",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Dr. Strage\",\r\n  \"synopsis\": \"A mind-bending thriller about dream manipulation.\",\r\n  \"rating\": 8.8\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9701/api/movies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9701",
+					"path": [
+						"api",
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "edit-movie",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Inception Updated\",\r\n  \"synopsis\": \"Updated synopsis about dream manipulation. v1\",\r\n  \"rating\": 9.0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9701/api/movies/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9701",
+					"path": [
+						"api",
+						"movies",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete-movie",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9701/api/movies/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9701",
+					"path": [
+						"api",
+						"movies",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search-movie",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9701/api/movies/search?title=Inception",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9701",
+					"path": [
+						"api",
+						"movies",
+						"search"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "Inception"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "iss-location",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9701/api/satellites/iss",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9701",
+					"path": [
+						"api",
+						"satellites",
+						"iss"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "comments",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9701/api/comments",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9701",
+					"path": [
+						"api",
+						"comments"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
